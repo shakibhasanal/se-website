@@ -1,0 +1,530 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding does not affect width/height */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Default font */
+    color: #fff; /* White text color */
+}
+
+/* Main Section */
+main {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('river.jpg'); 
+    background-position: center;
+    background-size: cover;
+    height: 100vh; /* Set to full viewport height */
+    position: relative; /* Relative positioning for child elements */
+}
+
+/* Navbar */
+.navbar {
+    width: 1200px;
+    height: 75px;
+    margin: 0 auto; /* Center the navbar */
+    display: flex;
+    justify-content: space-between; /* Space between logo, menu, search */
+    align-items: center; /* Align items vertically */
+}
+
+/* Logo */
+.icon {
+    display: flex;
+    align-items: center; /* Vertically align */
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ff7200; 
+    font-size: 35px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu */
+.menu ul {
+    list-style: none;
+    display: flex; /* Align items horizontally */
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul li {
+    margin-left: 50px; /* Adjust spacing between menu items */
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.4s ease-in-out; /* Smooth hover effect */
+}
+
+.menu ul li a:hover {
+    color: #ff7200;
+}
+
+/* Search */
+.search {
+    display: flex; /* Arrange input and button inline */
+}
+
+.srch {
+    width: 200px;
+    height: 40px;
+    border: 1px solid #ff7200;
+    border-right: none;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.srch:focus {
+    outline: none; /* Remove focus outline */
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: background 0.3s ease; /* Smooth transition */
+}
+
+.btn:hover {
+    background: #e65c00; /* Darker orange on hover */
+}
+
+.btn:focus {
+    outline: none;
+}
+
+ 
+.content {
+    text-align: center; /* Center align content */
+    margin-top: 10%;
+}
+
+.content h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: white; /* Text color */
+    margin-bottom: 20px; /* Add spacing below h1 */
+}
+
+.content .cn {
+    width: 160px;
+    height: 40px;
+    background: #ff7200; /* Orange background */
+    color: white;
+    border: none;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px; /* Center text vertically */
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+    display: inline-block;
+    transition: background 0.3s ease; /* Smooth hover effect */
+}
+
+.content .cn:hover {
+    background: rgb(21, 21, 2); /* Slightly darker orange on hover */
+    color: #fff;
+}
+
+#contactForm {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+    border-radius: 10px;
+    color: white;
+}
+
+#contactForm label {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#contactForm input, #contactForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ff7200;
+}
+
+#contactForm button {
+    background-color: #ff7200;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+} 
+
+#contactForm button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+/* Social Media Icons Hover Effect */
+.social-icons a {
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Increase size on hover */
+    color: #ff8c00; /* Optional: Change color on hover */
+}
+/* Style for SE SIBLINGS text */
+.logo-text {
+    color: orange;              /* Default text color */
+    font-size: 24px;            /* Adjust text size */
+    font-weight: bold;          /* Bold text */
+    margin-left: 10px;          /* Add spacing between photo and text */
+    transition: color 0.3s ease; /* Smooth hover transition */
+    cursor: pointer;            /* Pointer effect on hover */
+}
+
+/* Hover effect */
+.logo-text:hover {
+    color: white; /* Change text color to white on hover */
+}
+/* Center the About Story Section */
+#aboutStory {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+
+/* Style for the Heading */
+.story-heading {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: orange;
+    text-transform: uppercase;
+}
+
+/* Style for the Story Text */
+.story-text {
+    font-size: 20px;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 90%;
+}
+#contact {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+
+/* Style for the Heading */
+.contact-heading {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: orange;
+    text-transform: uppercase;
+}
+
+/* Style for the Story Text */
+.contact-text {
+    font-size: 20px;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+
+.header{
+    height: 100vh;
+    width: 100%;
+    background-image: url("aott.jpg") ;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    font-size: 37px;
+    font-style: italic;
+    color: #fff;
+}
+
+.menu2{
+    list-style: none;
+    display: flex; /* Align items horizontally */
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    z-index: 10;
+}
+.menu2 a {
+    text-decoration: none;
+    color: #ff8c00;
+    font-size: 32px;
+    transition: 0.3s ease-in-out;
+}
+.menu2 a:hover {
+    color: greenyellow;
+}
+.header .menu2 {
+    top: 10px;
+    left: 10px;
+}
+.overlay-picture {
+    width: 250px; /* Adjust size of the images */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 10; /* Appear above the background */
+    border: 3px solid white; /* Optional border */
+    border-radius: 10px; /* Optional rounded corners */
+}
+/* Positioning Picture 1 */
+.picture1 {
+    top: 20%;   /* Distance from the top */
+    left: 10%;  /* Distance from the left */
+}
+
+/* Positioning Picture 2 */
+.picture2 {
+    top: 20%; /* Distance from the bottom */
+    right: 10%;  /* Distance from the right */
+}
+.picture-text {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black; /* Add a shadow for readability */
+}
+.picture-container {
+    position: absolute; /* Allows manual positioning */
+    text-align: center; /* Centers the text below the image */
+    z-index: 10; /* Ensure it is above the background */
+}
+
+
+
+.sub-header {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("aven.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex; /* Enables horizontal layout */
+    justify-content: space-evenly; /* Distributes space between the images */
+    align-items: center; /* Aligns images vertically at the center */
+}
+
+.image-container1, .image-container2, .image-container3 {
+    text-align: center; /* Centers the text below the image */
+    z-index: 10; /* Ensure it is above the background */
+}
+
+.overlay-image1, .overlay-image2, .overlay-image3 {
+    width: 250px; /* Adjust size of the images */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 10; /* Appear above the background */
+    border: 3px solid white; /* Optional border */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+
+.kub-header {
+    height: 100vh;
+    width: 100%;
+    background-image: url("natural.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex; /* Enables horizontal layout */
+    justify-content: space-evenly; /* Distributes space between the images */
+    align-items: center; /* Aligns images vertically at the center */
+}
+
+.picture-container3, .picture-container4 {
+    text-align: center; /* Centers the text below the image */
+    z-index: 10; /* Ensure it is above the background */
+}
+
+.overlay-picture3, .overlay-picture4 {
+    width: 250px; /* Adjust size of the images */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 10; /* Appear above the background */
+    border: 3px solid white; /* Optional border */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+.pub-header{
+    height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("bts.jpg") ;
+    background-position: center;
+    background-size: cover;
+    display: flex; /* Enables horizontal layout */
+    justify-content: space-evenly; /* Distributes space between the images */
+    align-items: center; /* Aligns images vertically at the center */
+}
+
+.picture-container5, .picture-container6,.picture-container7,.picture-container8 {
+    text-align: center; /* Centers the text below the image */
+    z-index: 10; /* Ensure it is above the background */
+}
+
+.overlay-picture5, .overlay-picture6,.overlay-picture7,.overlay-picture8 {
+    width: 250px; /* Adjust size of the images */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 10; /* Appear above the background */
+    border: 3px solid white; /* Optional border */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+.nub-header{
+    height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("villagee.jpg") ;
+    background-position: center;
+    background-size: cover;
+    display: flex; /* Enables horizontal layout */
+    justify-content: space-evenly; /* Distributes space between the images */
+    align-items: center; /* Aligns images vertically at the center */
+}
+
+.picture-container9, .picture-container10,.picture-container11 {
+    text-align: center; /* Centers the text below the image */
+    z-index: 10; /* Ensure it is above the background */
+}
+
+.overlay-picture9, .overlay-picture10,.overlay-picture11 {
+    width: 250px; /* Adjust size of the images */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 10; /* Appear above the background */
+    border: 3px solid white; /* Optional border */
+    border-radius: 10px; /* Optional rounded corners */
+
+}
+
+.mub-header{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    display: flex; /* Enables horizontal layout */
+    justify-content: space-evenly; /* Distributes space between the images */
+    align-items: center; /* Aligns images vertically at the center  */
+}
+
+.picture-container12, .picture-container13,.picture-container14{
+    text-align: center; /* Centers the text below the image */
+    z-index: 10; /* Esnsure it is above the background */
+}
+
+.overlay-picture12, .overlay-picture13,.overlay-picture14 {
+    width: 250px; /* Adjust size of the images */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 10; /* Appear above the background */
+    border: 3px solid white; /* Optional border */
+    border-radius: 10px; /* Optional rounded corners */
+
+}
+.jub-header{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("civil.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex; /* Enables horizontal layout */
+    justify-content: space-evenly; /* Distributes space between the images */
+    align-items: center; /* Aligns images vertically at the center  */
+}
+
+.picture-container15, .picture-container16{
+    text-align: center; /* Centers the text below the image */
+    z-index: 10; /* Esnsure it is above the background */
+}
+
+.overlay-picture15, .overlay-picture16 {
+    width: 250px; /* Adjust size of the images */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 10; /* Appear above the background */
+    border: 3px solid white; /* Optional border */
+    border-radius: 10px; /* Optional rounded corners */
+
+}
+.bub-header{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("elonmusk.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex; /* Enables horizontal layout */
+    justify-content: space-evenly; /* Distributes space between the images */
+    align-items: center; /* Aligns images vertically at the center  */
+}
+
+.picture-container17, .picture-container18{
+    text-align: center; /* Centers the text below the image */
+    z-index: 10; /* Esnsure it is above the background */
+}
+
+.overlay-picture17, .overlay-picture18 {
+    width: 250px; /* Adjust size of the images */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 10; /* Appear above the background */
+    border: 3px solid white; /* Optional border */
+    border-radius: 10px; /* Optional rounded corners */
+
+}
+.yub-header{
+    height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("disney.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex; /* Enables horizontal layout */
+    justify-content: space-evenly; /* Distributes space between the images */
+    align-items: center; /* Aligns images vertically at the center  */
+}
+
+.picture-container19, .picture-container20{
+    text-align: center; /* Centers the text below the image */
+    z-index: 10; /* Esnsure it is above the background */
+}
+
+.overlay-picture19, .overlay-picture20 {
+    width: 250px; /* Adjust size of the images */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 10; /* Appear above the background */
+    border: 3px solid white; /* Optional border */
+    border-radius: 10px; /* Optional rounded corners */
+
+}

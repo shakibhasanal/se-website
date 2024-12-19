@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            display: none; /* All sections hidden by default */
+            padding: 20px;
+        }
+        section.active {
+            display: block; /* Only the active section is visible */
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>Click buttons to navigate between pages.</p>
+    </header>
+
+    <!-- Navigation Buttons -->
+    <nav>
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('about')">About</button>
+        <button onclick="showSection('services')">Services</button>
+        <button onclick="showSection('contact')">Contact</button>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home" class="active">
+        <h2>Home</h2>
+        <p>Welcome to the homepage! This is where your main content goes.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>This is the About Us section. Learn more about our work here.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>Explore the services we offer to help you achieve your goals.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us! Email: example@example.com</p>
+    </section>
+
+    <!-- JavaScript for Navigation -->
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
